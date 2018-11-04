@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./person-comp.component.css']
 })
 export class PersonCompComponent implements OnInit {
+  name: any;
+  age: any;
+  title: string;
 
-  constructor() { }
+  constructor() {
+    this.name = 'Tal';
+    this.age = 39;
+    this.title = 'Excercise 1';
+  }
+
+  swap() {
+    this.name = 39;
+    this.age = 'Tal';
+  }
 
   ngOnInit() {
   }
