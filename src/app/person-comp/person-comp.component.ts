@@ -6,20 +6,50 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./person-comp.component.css']
 })
 export class PersonCompComponent implements OnInit {
-  name: any;
-  age: any;
+  name: string;
+  age: string;
   title: string;
+  dataText1: string = '';
+  dataText2: string = '';
+  checked: boolean = false;
 
   constructor() {
-    this.name = 'Tal';
-    this.age = 39;
-    this.title = 'Excercise 1';
+      this.title = 'Basic Components';
+      this.name = 'Tal';
+      this.age = '39';
   }
 
-  swap() {
-    this.name = 39;
-    this.age = 'Tal';
+  swap() : void {
+      let temp: string;
+      temp = this.age;
+      this.age = this.name;
+      this.name = temp;
   }
+
+  setText1(data: string) : void {
+      this.dataText1 = data;
+      if(this.dataText1.length > 4) {
+          this.swap2();
+      }
+  }
+
+    setText2(data: string) : void {
+        this.dataText2 = data;
+        if(this.dataText2.length > 4) {
+            this.swap2();
+        }
+    }
+
+    swap2() : void {
+      let temp: string;
+      temp = this.dataText1;
+      this.dataText1 = this.dataText2;
+      this.dataText2 = temp;
+    }
+
+    changeCheck() : void {
+      this.checked = !this.checked;
+    }
 
   ngOnInit() {
   }

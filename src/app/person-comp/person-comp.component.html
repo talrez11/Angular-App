@@ -1,6 +1,18 @@
-<div>
-    <h2>{{title}}</h2>
-    <span class="name">{{name}}</span>
-    <span class="age">{{age}}</span>
-    <button (click)="swap()">click</button>
-</div>
+<!--Ex1-->
+<h2>{{title}}</h2>
+<span>{{name}}</span><br>
+<span>{{age}}</span><br>
+<input type="button" value="swap" (click)="swap()"><br><br>
+
+<!--Ex2-->
+<input type="text"  #txt1 (keyup)="setText1(txt1.value)"><br>
+<input type="text"  #txt2 (keyup)="setText2(txt2.value)"><br>
+<p>{{dataText1}}</p>
+<p>{{dataText2}}</p>
+
+<!--Ex3-->
+checkox<input type="checkbox" #chk [checked]="checked"><br>
+Radio1<input type="radio" name="radio" (click)="changeCheck()"><br>
+Radio2<input type="radio" name="radio" (click)="changeCheck()">
+
+
