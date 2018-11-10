@@ -1,0 +1,8 @@
+<input type="text" [value]="dataText1" #txt1 (keyup)="setText1(txt1.value)"><br>
+<input type="text" [value]="dataText2" #txt2 (keyup)="setText2(txt2.value)"><br>
+<input type="text" #txt3 [value]="dataText3"><br><br>
+
+Red <input type="radio" name="color" (click)="radioChecked()"><br>
+Blue <input type="radio" name="color" (click)="radioChecked()"><br>
+
+<h2 *ngIf="dataRadio">Checked</h2>
