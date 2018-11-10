@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+
+<input type="text" #txt (keyup)="setText(txt.value)" [style.backgroundColor]="isRed ? 'red' : 'blue'"><br>
+
+Red: <input type="checkbox" (change)="setColor('red')"><br>
+Green: <input type="checkbox" (change)="setColor('green')"><br>
+Blue : <input type="checkbox" (change)="setColor('blue')"><br>
+
+<ul>
+  <li *ngIf="red">Red</li>
+  <li *ngIf="green">Green</li>
+  <li *ngIf="blue">Blue</li>
+</ul>
