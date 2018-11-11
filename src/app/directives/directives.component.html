@@ -10,4 +10,33 @@ Blue : <input type="checkbox" (change)="setColor('blue')"><br>
   <li *ngIf="red">Red</li>
   <li *ngIf="green">Green</li>
   <li *ngIf="blue">Blue</li>
-</ul>
+</ul><br>
+
+<h2>Angular For Directive</h2>
+
+<ul>
+  <li *ngFor="let per of person">
+    {{per.name}}
+    <ul>
+      <li>Age: {{per.age}}</li>
+    </ul>
+    <ul>
+      <li>City: {{per.city}}</li>
+    </ul>
+  </li>
+</ul><br>
+
+<table border="1">
+  <thead>
+  <th>Name</th>
+  <th>Age</th>
+  <th>City</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let per of person">
+      <td>{{per.name}}</td>
+      <td>{{per.age}}</td>
+      <td>{{per.city}}</td>
+    </tr>
+  </tbody>
+</table>
