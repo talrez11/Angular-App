@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
   dataText1: string = '';
   dataText2: string = '';
-  dataChecked: boolean: false;
+  dataChecked: boolean =  false;
   constructor() { }
 
   setText1(data: string) : void {
@@ -26,12 +26,12 @@ export class TestComponent implements OnInit {
   }
 
   swap() : void {
-    let temp = this.dataText1;
-    this.dataText1 = this.dataText2;
-    this.dataText2 = temp;
+      let temp = this.dataText1;
+      this.dataText1 = this.dataText2;
+      this.dataText2 = temp;
   }
 
-  check() {
+  check(): void {
     this.dataChecked = !this.dataChecked;
   }
 

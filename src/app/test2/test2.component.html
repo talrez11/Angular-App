@@ -1,3 +1,1 @@
-<p>
-  test2 works!
-</p>
+<input type="text" #txt (keyup)="setText(txt.value)" [class]="isRed ? 'red' : 'blue'" [value]="dataText">
