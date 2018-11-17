@@ -8,6 +8,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { DirectComponent } from './direct/direct.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Ex4ParentComponent } from './ex4-parent/ex4-parent.component';
+import { Ex4ChildComponent } from './ex4-child/ex4-child.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ChildComponent } from './child/child.component';
     DirectivesComponent,
     DirectComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    Ex4ParentComponent,
+    Ex4ChildComponent
   ],
   imports: [
     BrowserModule
