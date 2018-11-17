@@ -1,3 +1,9 @@
-<p>
-  ex4-child works!
-</p>
+<div *ngFor="let p of pers">
+  First Name:<input type="text" #txt1 [value]="p.fName"><br>
+  Last Name: <input type="text" #txt2 [value]="p.lName"><br>
+  City: <select [value] = "p.city" #city>
+  <option value="TLV">TLV</option>
+  <option value="Haifa">Haifa</option>
+  <option value="Akko">Akko</option>
+</select>
+</div>

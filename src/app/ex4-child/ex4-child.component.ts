@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-ex4-child',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ex4-child.component.css']
 })
 export class Ex4ChildComponent implements OnInit {
+  @Input()
+  pers: any[] = [];
 
   constructor() { }
 
