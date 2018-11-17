@@ -1,0 +1,5 @@
+<span>My Name is {{childPerson.name}}. I'm {{childPerson.age}} years old and {{childPerson.licence ? 'Have' : 'Have No'}} driving licence.</span>
+<br><br><br>
+
+<input type="text" #txt><br>
+<input type="button" value="Copy to Parent" (click)="sendData(txt.value)">

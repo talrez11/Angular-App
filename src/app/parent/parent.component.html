@@ -1,0 +1,8 @@
+<h3>{{title}}</h3>
+Name: <input type="text" #name (keyup)="parentPerson.name = name.value"><br>
+Age: <input type="text" #age (keyup)="parentPerson.age = age.value"><br>
+Has Licence: <input type="checkbox" #chk (change)="parentPerson.licence = chk.checked"><br><br>
+
+{{dataFromChild}}
+
+<app-child [childPerson] = "parentPerson" (stringPass)="getDataFromChild($event)"></app-child>
